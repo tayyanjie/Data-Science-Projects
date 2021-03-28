@@ -1,0 +1,72 @@
+---
+title: "Heart Failure Prediction"
+author: "Tay Yan Jie"
+date: "3/24/2021"
+output: rmarkdown::github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Load Libraries
+```{r libraries, echo=TRUE, results=FALSE}
+library(tidyverse)
+```
+
+# Load Data
+```{r echo=TRUE, results='hide', message=FALSE}
+data <- read_csv("../heart_failure_clinical_records_dataset.csv")
+```
+
+# Data Exploration
+```{r}
+# Convert Categorical Variables to factors
+categorical_features <- c("anaemia","diabetes","high_blood_pressure","sex")
+data <- data %>% 
+  mutate_at(vars(any_of(categorical_features)), as.factor)
+summary(data)
+```
+
+### Check for missing values:
+```{r}
+any(is.na(data))
+```
+There are no missing values in the Dataset.
+
+## Visualise Categorical Features
+### Plot of Genders in Dataset
+```{r sex}
+data %>%
+  mutate(sex=case_when(sex==1~"Female", sex==0~"Male")) %>%
+  ggplot() +
+  geom_bar(aes(sex, fill=sex)) +
+  labs(x="Gender", y="Counts", title="Counts of Genders in Dataset")
+```
+
+### Plot of Diabetes in Dataset
+```{r}
+data %>%
+  ggplot() +
+  geom_bar(aes(diabetes, fill=diabetes)) +
+  labs(x="Diabetes", y="Counts", title="Diabetes in Dataset") +
+  scale_fill_manual(values=c("dark green","dark red"))
+```
+
+### Plot of High Blood Pressure in Dataset
+```{r}
+data %>%
+  ggplot() +
+  geom_bar(aes(high_blood_pressure, fill=high_blood_pressure)) +
+  labs(x="High Blood Pressure", y="Counts", title="High Blood Pressure in Dataset") +
+  scale_fill_manual(values=c("dark green","dark red"))
+```
+
+### Plot of Anaemia in Dataset
+```{r}
+data %>%
+  ggplot() +
+  geom_bar(aes(anaemia, fill=anaemia)) +
+  labs(x="Anaemia", y="Counts", title="Anaemia in Dataset") +
+  scale_fill_manual(values=c("dark green","dark red"))
+```
+
