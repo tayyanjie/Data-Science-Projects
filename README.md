@@ -1,6 +1,7 @@
-# Kaggle-Projects
+# Data Science Projects
 
-This repository contains the Machine Learning Projects done using Kaggle Datasets.
+This repository contains the Data Science Projects
 
+## Machine Learning Projects
 1. Stroke Prediction using Traditional Machine Learning Methods
 2. Prediction of Death due to Heart Failure using Traditional Machine Learning Methods
