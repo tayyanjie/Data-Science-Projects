@@ -10,4 +10,4 @@ This repository contains the Data Science Projects
 1. [Visualizing Singapore Resident Population](https://github.com/tayyanjie/Data-Science-Projects/tree/main/Visualizing%20Singapore%20Resident%20Population)
 
 ## Miscellaneous
-1. [Web Scrapping with Beautiful and Mechanical Soup](https://github.com/tayyanjie/Data-Science-Projects/blob/main/Web%20Scrapping%20with%20Beautiful%20and%20Mechanical%20Soup.ipynb)
+1. [Web Scrapping with Beautiful and Mechanical Soup](https://github.com/tayyanjie/Data-Science-Projects/blob/main/Miscellaneous%20Projects/Web%20Scraping%20with%20Beautiful%20and%20Mechanical%20Soup.ipynb)
